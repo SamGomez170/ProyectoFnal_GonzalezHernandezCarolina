@@ -1,0 +1,14 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <p>Título: <i>{{ noticia.titulo }} </i></p>
+    <p>Autor: <i>{{ noticia.autor }}</i></p>
+    <p>Descripción: <i>{{ noticia.descripcion }} </i></p>
+    <p>Fecha: <i>{{ noticia.fecha }} </i></p>
+    <p>
+        <a href="{% url 'ListaNoticias' %}">Regresar</a>
+    </p>
+{% endblock contenido %}

@@ -1,0 +1,35 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<h2 style="color: rgb(93, 108, 131)"> Editar Libro</h2>
+
+
+{%if mi_form.errors %}
+
+<p style="color: red"> Datos inválidos, por favor llena todos los campos. </p>
+
+{% endif %}
+
+
+<form action="" enctype="multipart/form-data"  method="POST"  style="color: rgb(93, 108, 131)" 
+> {%csrf_token%}
+
+    <table>
+
+        {{mi_form.as_table}}
+
+    </table>
+
+    <br>
+
+    <input type="submit", value="Enviar", style="color:rgb(255, 0, 179)">
+
+</form>
+
+<br>
+<br>
+
+
+{% endblock contenido %}

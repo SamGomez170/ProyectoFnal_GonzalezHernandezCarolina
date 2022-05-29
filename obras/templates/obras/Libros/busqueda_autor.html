@@ -1,0 +1,22 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<h3 style="color: rgb(93, 108, 131)"> Buscar por autor:</h3>
+<br>
+    <form action="/obras/buscar_libro" method="GET">
+
+        <input type="text" name="autor" id="autor">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    <br>
+    <br>
+    
+    <p>
+        <a href="{% url 'lista_libros' %}">Regresar</a>
+    </p>
+{% endblock contenido %}

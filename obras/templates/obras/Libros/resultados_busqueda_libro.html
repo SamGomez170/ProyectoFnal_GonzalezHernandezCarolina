@@ -1,0 +1,29 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    <p>Los libros del autor {{autor}} son:</p>
+
+    {% if libros %} 
+
+    <ul>
+    {% for x in libros %}
+
+        <li>{{x.titulo}}</li>
+        <img src="{{x.portada.url}}" height="100px" alt="No hay imagen.">
+
+    {% endfor %}
+
+    </ul>
+
+    {% endif %} 
+    
+    <br>
+    <br>
+    
+    <p>
+        <a href="{% url 'busqueda_autor' %}">Regresar</a>
+    </p>
+    
+{% endblock contenido %}

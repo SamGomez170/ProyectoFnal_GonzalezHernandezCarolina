@@ -1,0 +1,47 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<button style = "background-color: rgb(196, 195, 195); border-color: rgb(58, 126, 103);">
+
+    <a href="{% url 'busqueda_titulo' %}"> Buscar noticia </a>
+</button>
+
+<button style = "background-color: rgb(196, 195, 195); border-color: rgb(58, 126, 103);">
+<a href="{% url 'New' %}">Agregar Noticia</a>
+</button>
+
+<br>
+<br>
+<br>
+
+<ul>
+
+    {% for noticia in object_list %} 
+
+    <li>
+
+        <p>{{noticia.titulo}}</p>
+
+        <p>
+
+            <a href="{% url 'Detail' noticia.id %}">Ver</a> &nbsp;
+            <a href="{% url 'Edit' noticia.id %}">Editar</a> &nbsp;
+            <a href="{% url 'Delete' noticia.id %}">Borrar</a>
+
+
+
+        </p>
+
+
+    </li>
+
+    {% endfor %}
+
+
+</ul>
+
+
+{% endblock %}
+

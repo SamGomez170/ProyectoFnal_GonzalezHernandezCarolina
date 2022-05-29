@@ -1,0 +1,20 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<p>Acá agregamos imágenes.</p>
+
+<form action="" method="POST" > {%csrf_token%}
+
+        {{form.as_p}}
+
+
+
+    <input type="submit", value="Subir Imagen", style="color:red">
+
+
+</form>
+
+{% endblock contenido %}

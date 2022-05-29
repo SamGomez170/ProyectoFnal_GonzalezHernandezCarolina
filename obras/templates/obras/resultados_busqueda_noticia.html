@@ -1,0 +1,28 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    
+    <p>Las noticias con el {{titulo}} son:</p>
+
+    {% if noticias %} 
+
+    <ul>
+    {% for noticia in noticias %}
+
+        <li>{{noticia.titulo}}</li>
+        {{noticia.descripcion}}
+        <br>
+        {{noticia.autor}}<br>
+        
+    {% endfor %}
+
+    </ul>
+
+    {% endif %}  
+
+    <p>
+        <a href="{% url 'busqueda_titulo' %}">Regresar</a>
+    </p>
+{% endblock contenido %}

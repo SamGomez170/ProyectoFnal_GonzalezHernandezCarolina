@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+
+{% block contenido %}
+    <h1>  </h1>
+    
+    <FONT SIZE=6 COLOR="lightblue">
+    Listas </FONT> 
+
+    <FONT COLOR="lightblue">
+
+    {%if form.errors %}
+    <p style="color: red">Datos incorrectos</p>
+
+    {% endif %}
+
+    <form method="POST" action="" 
+    style="display: flex; flex-direction: column; max-width: 60vw; margin-inline: auto;"
+    >
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Enviar">
+    </form>
+
+    </FONT>
+{% endblock contenido %}

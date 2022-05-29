@@ -1,0 +1,14 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    
+    <p>Título: <i>{{ lista.titulo }} </i></p>
+    <p>Genero: <i>{{ lista.genero }}</i></p>
+    <p>Libros: <i>{{ lista.libros }} </i></p>
+    <p>Posteador: <i>{{ lista.posteador }} </i></p>
+    <p>
+        <a href="{% url 'ListaListas' %}">Regresar</a>
+    </p>
+{% endblock contenido %}

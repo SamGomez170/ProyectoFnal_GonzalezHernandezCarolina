@@ -1,0 +1,20 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    <p>Título: <i>{{ libro.titulo }} </i></p>
+    <p>Autor: <i>{{ libro.autor }}</i></p>
+    <p>Descripción: <i>{{ libro.descripcion }} </i></p>
+    <p>Año: <i>{{ libro.año }} </i></p>
+
+    <img src="{{libro.portada.url}}" height="150px" alt="No hay imagen.">
+
+    <br>
+    <br>
+
+    <p>
+        <a href="{% url 'lista_libros' %}">Regresar</a>
+    </p>
+
+{% endblock contenido %}

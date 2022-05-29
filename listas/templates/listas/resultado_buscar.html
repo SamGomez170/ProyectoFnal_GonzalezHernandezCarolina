@@ -1,0 +1,28 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    
+    
+    <p>Las listas con del género {{genero}} son:</p>
+
+    {% if listas %} 
+
+    <ul>
+    {% for lista in listas %}
+
+        <li>{{lista.titulo}}</li>
+        {{lista.posteador}}
+        <br>
+
+    {% endfor %}
+
+    </ul>
+
+    {% endif %}  
+    <p>
+        <a href="{% url 'busqueda_lista' %}">Regresar</a>
+    </p> 
+
+{% endblock contenido %}

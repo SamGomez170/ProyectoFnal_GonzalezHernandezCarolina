@@ -1,0 +1,25 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<h3 style="color: rgb(93, 108, 131)"> Buscar por género:</h3>
+<br>
+    
+    <form action="/listas/buscar_lista" method="GET">
+
+        <input type="text" name="genero" id="genero">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+
+    <br>
+    <br>
+    
+    <p>
+        <a href="{% url 'ListaListas' %}">Regresar</a>
+    </p>
+{% endblock contenido %}

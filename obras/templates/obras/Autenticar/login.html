@@ -1,0 +1,16 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<body>
+    <form action="" method="POST">   {% csrf_token %}
+        
+        {{form.as_p}}
+
+        <button type="submit">Iniciar Sesión</button>
+
+    </form>
+</body>
+
+{% endblock contenido %}

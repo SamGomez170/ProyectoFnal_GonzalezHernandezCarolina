@@ -1,0 +1,50 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<button style = "background-color: rgb(196, 195, 195); border-color: rgb(190, 41, 41);">
+
+
+    <a style="color: rgb(184, 91, 48)" href="{% url 'busqueda_lista' %}"> Buscar Lista </a>
+</button>
+
+<button style = "background-color: rgb(196, 195, 195); border-color: rgb(190, 41, 41);">   
+<a style="color: rgb(184, 91, 48)" href="{% url 'Nuevo' %}"> Agregar Lista</a>
+</button>
+
+<br>
+<br>
+<br>
+
+<ul>
+
+    {% for l in object_list %} 
+
+    <li>
+
+        <p>Título: {{l.titulo}}</p>
+
+        <p>
+
+            <a  style="color: rgb(184, 91, 48)"  href="{% url 'Detalle' l.id %}">Ver</a> &nbsp;
+            <a  style="color: rgb(184, 91, 48)" href="{% url 'Editar' l.id %}">Editar</a> &nbsp;
+            <a  style="color: rgb(184, 91, 48)" href="{% url 'Borrar' l.id %}">Borrar</a>
+
+
+
+
+        </p>
+
+
+    </li>
+
+    {% endfor %}
+
+
+</ul>
+
+
+
+
+{% endblock %}

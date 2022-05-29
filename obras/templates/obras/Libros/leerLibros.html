@@ -1,0 +1,39 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<button style = "background-color: rgb(190, 189, 192); border-color: rgb(70, 58, 126);">
+
+    <a style="color: rgb(184, 48, 172)" href="{% url 'busqueda_autor' %}"> Busqueda por autor </a>
+</button>
+<button style = "background-color: rgb(190, 189, 192); border-color: rgb(70, 58, 126);">
+
+    <a style="color: rgb(184, 48, 172)" href="{% url 'nuevo_libro' %}"> Agregar Libro </a>
+</button>
+
+<br>
+<br>
+<br>
+
+{% for l in libros %}
+    <p>{{l.titulo}}</p>
+    
+
+    <a  style="color: rgb(184, 48, 172)" href="{% url 'ver_libro' l.id %}"> Ver </a> &nbsp;
+
+    
+
+    <a style="color: rgb(184, 48, 172)" href="{% url 'borrar_libro' l.id %}"> Borrar </a> &nbsp;
+
+
+    <a style="color: rgb(184, 48, 172)" href="{% url 'editar_libro' l.id %}"> Editar </a>  
+
+
+
+
+{% endfor %}
+
+
+{% endblock %}

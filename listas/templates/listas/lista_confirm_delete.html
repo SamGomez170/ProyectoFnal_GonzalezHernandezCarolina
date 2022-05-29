@@ -1,0 +1,15 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    
+    
+    <form method="post">{%csrf_token%}
+
+        ¿Estás seguro que deseas borrar la lista "{{ object }}"?
+        <input type="submit" view="Si">
+    </form>
+
+
+{% endblock contenido %}

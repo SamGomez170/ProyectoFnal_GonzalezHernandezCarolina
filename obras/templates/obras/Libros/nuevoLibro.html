@@ -1,0 +1,24 @@
+{% extends "obras/layout.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<h2 style="color: rgb(93, 108, 131)"> Agregar Libro</h2>
+
+<form action="" enctype="multipart/form-data" method="POST"  style="color: rgb(93, 108, 131)" >  {% csrf_token %}
+
+    <table>
+
+        {{form.as_table}}
+
+    </table>
+    <br>
+
+    <input type="submit" value="Enviar", style="color:rgb(255, 0, 179)">
+
+
+</form>
+
+<br>
+<br>
+{% endblock contenido %}
