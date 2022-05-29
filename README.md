@@ -32,3 +32,7 @@ SamG
 
 Contraseña:
 Casas638
+
+Video: https://drive.google.com/file/d/1IQnmfHbOzsIZSNif6jTd410tVgLwHLl6/view?usp=sharing
+
+Pruebas en: doc llamado "Casos_PRUEBA.pdf"
