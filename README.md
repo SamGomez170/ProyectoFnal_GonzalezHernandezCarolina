@@ -11,7 +11,7 @@ Libros:
 Título,
 Autor,
 Descripción,
-Año
+Año,
 Portada
 
 Noticias:
@@ -24,7 +24,7 @@ Listas:
 Título, 
 Género,
 Libros,
-Autor
+Posteador
 
 
 SUPER USUARIO:
